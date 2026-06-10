@@ -703,7 +703,8 @@ body {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    /* Закругление краев как на макете */
+    position: relative;
+    left: 100px;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
@@ -925,13 +926,14 @@ body {
 .img25,
 .img36,
 .img28,
-.img48 {
+.img48,
+.img3 {
     grid-column: span 2;
     grid-row: span 2;
 }
 
 /* Вертикальный прямоугольник (высокое фото) */
-.img3,
+
 .img9,
 .img15,
 .img8,
