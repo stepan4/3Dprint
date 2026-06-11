@@ -22,6 +22,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
+
 }
 
 .container {
@@ -141,7 +142,7 @@ body {
     align-items: center;
 }
 
-.img_bambo{
+.img_bambo {
     width: 650px;
     height: 700px;
 }
@@ -666,4 +667,534 @@ body {
 .address-text p:last-child {
     color: var(--text-dim);
     margin: 0;
+}
+
+/* ========== АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ (ДОБАВЛЕНО, НЕ МЕНЯЕТ ОСНОВНЫЕ СТИЛИ) ========== */
+
+/* Планшеты и небольшие ноутбуки */
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-title {
+        width: 100%;
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .advantages-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    .img_bambo {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* Телефоны (все основные правки) */
+@media (max-width: 768px) {
+
+    /* Хедер — компактный */
+    .header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        position: relative;
+        left: 15px;
+        font-size: 20px;
+    }
+
+    .nav-pill {
+        position: relative;
+        right: 110px;
+    }
+
+    .menu-trigger {
+        font-size: 12px;
+    }
+
+    .menu-trigger i {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        position: absolute;
+        width: 150px;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        gap: 0;
+        border-radius: 20px;
+        padding: 15px 20px;
+        display: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1001;
+    }
+
+    .nav-pill:hover .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* .header-info {
+        text-align: right;
+        margin-left: 0;
+    } */
+
+    .work-hours {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .phone-link {
+        font-size: 14px;
+    }
+
+    /* Hero — мобильная версия */
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 12px;
+    }
+
+    .printer-main-img {
+        max-width: 320px;
+    }
+
+    .img_bambo {
+        width: 280px;
+        height: auto;
+    }
+
+    /* Секции — отступы меньше */
+    .services,
+    .advantages,
+    .how-it-works,
+    .faq,
+    .location {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    /* Карточки услуг — адаптивная высота */
+    .service-card {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .service-card i {
+        font-size: 42px;
+    }
+
+    /* Преимущества — текстовые блоки */
+    .adv-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .adv-icon-box {
+        margin: 0 auto;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+
+    /* Шаги заказа */
+    .step-card {
+        text-align: center;
+    }
+
+    .step-number {
+        position: static;
+        font-size: 42px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .step-card h3 {
+        margin-top: 5px;
+    }
+
+    /* FAQ грид — 1 колонка */
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+        padding: 24px;
+    }
+
+    /* Карта и адрес */
+    .map-wrapper {
+        border-radius: 20px;
+    }
+
+    .map-wrapper iframe {
+        height: 320px;
+    }
+
+    .address-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    /* Футер — колонки в столбик */
+    .footer {
+        padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-nav li {
+        margin-bottom: 0;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+}
+
+/* Очень маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 11px;
+    }
+
+    .nav-pill {
+        position: relative;
+        left: 0;
+    }
+
+    .logo{
+        position: relative;
+        left: 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .adv-text h3 {
+        font-size: 1rem;
+    }
+
+    .tags span {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .step-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    .address-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .address-card i {
+        font-size: 28px;
+    }
+}
+
+/* Альбомная ориентация на телефонах — поправим высоту hero */
+@media (max-width: 850px) and (orientation: landscape) {
+    .hero {
+        padding: 100px 0 40px;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-grid {
+        gap: 20px;
+    }
+
+    .printer-main-img {
+        max-width: 280px;
+    }
+}
+
+/* ========== ФИНАЛЬНЫЙ ФИКС: ВСЁ ДОХОДИТ ДО КОНЦА И НЕТ ГОРИЗОНТАЛЬНОЙ ПРОКРУТКИ ========== */
+
+
+/* 7. Специальный фикс для телефонов — всё в пределах экрана */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Убираем фиксированные ширины */
+    .hero-title {
+        width: 100%;
+        font-size: clamp(28px, 7vw, 36px);
+    }
+
+    .hero-subtitle {
+        width: 100%;
+    }
+
+    .service-card {
+        height: auto;
+    }
+
+    /* Адресная карта не вылезает */
+    .address-card {
+        position: relative;
+        margin-top: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Карта не вылезает */
+    .map-wrapper {
+        width: 100%;
+    }
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Все сетки в 1 колонку на узких экранах */
+    .services-grid,
+    .steps-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* 1. Запрещаем горизонтальную прокрутку на всех устройствах */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    /* 2. Растягиваем body на всю высоту и прижимаем футер */
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 3. Main растягивается, футер прижат к низу */
+    main {
+        flex: 1 0 auto;
+    }
+
+    .footer {
+        flex-shrink: 0;
+    }
+
+    /* 4. Все контейнеры не могут вылезать за пределы экрана */
+    .container,
+    .hero-grid,
+    .advantages-wrapper,
+    .services-grid,
+    .steps-grid,
+    .faq-grid,
+    .footer-grid {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* 5. Фикс для картинок, чтобы они не вылезали */
+    img,
+    .printer-main-img,
+    .img_bambo,
+    .printer-img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* 6. Фикс для текста, чтобы не вылезал */
+    .hero-title {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+}
+
+/* 8. Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        left: 15px;
+        right: 15px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .nav-pill{
+        position: absolute;
+        bottom: 10px;
+        left: 30vh;
+    }
+
+    .header-info{
+        display: none;
+    }
+
+}
+
+@media (max-width: 330px) {
+    .nav-pill{
+        position: absolute;
+        bottom: 10px;
+        left: 22vh;
+    }
+
+}
+
+/* 9. Фикс для старых iPhone */
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available;
+    }
 }
