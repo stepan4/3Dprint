@@ -714,37 +714,39 @@ body {
 /* Телефоны (все основные правки) */
 @media (max-width: 768px) {
 
-    /* Хедер — компактный */
+    /* Хедер */
     .header {
-        padding: 15px 20px;
-        flex-wrap: wrap;
+        padding: 15px 15px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     .logo {
-        position: relative;
-        left: 15px;
-        font-size: 20px;
+        font-size: 18px;
+        order: 3;
     }
 
     .nav-pill {
-        position: relative;
-        right: 110px;
+        padding: 6px 14px;
+        order: 1;
+        margin-left: 0;
     }
 
     .menu-trigger {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .menu-trigger i {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .nav-links {
-        position: absolute;
         width: 150px;
+        position: absolute;
         top: 100%;
-        left: 20px;
-        right: 20px;
+        left: 15px;
+        right: 15px;
         background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
@@ -756,7 +758,8 @@ body {
         z-index: 1001;
     }
 
-    .nav-pill:hover .nav-links {
+    .nav-pill:hover .nav-links,
+    .nav-pill:focus-within .nav-links {
         display: flex;
     }
 
@@ -770,10 +773,20 @@ body {
         border-bottom: none;
     }
 
-    /* .header-info {
+    .header-info {
         text-align: right;
-        margin-left: 0;
-    } */
+        order: 2;
+    }
+
+    .work-hours {
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    .phone-link {
+        font-size: 12px;
+        white-space: nowrap;
+    }
 
     .work-hours {
         font-size: 9px;
@@ -958,20 +971,19 @@ body {
         font-size: 16px;
     }
 
+    .work-hours {
+        display: none;
+    }
+
+    .phone-link {
+        font-size: 11px;
+    }
+
     .btn {
         padding: 12px 22px;
         font-size: 11px;
     }
 
-    .nav-pill {
-        position: relative;
-        left: 0;
-    }
-
-    .logo{
-        position: relative;
-        left: 0;
-    }
 
     .section-title {
         font-size: 28px;
@@ -1038,9 +1050,6 @@ body {
 
 /* 7. Специальный фикс для телефонов — всё в пределах экрана */
 @media (max-width: 768px) {
-    .header {
-        padding: 15px 15px;
-    }
 
     .container {
         padding: 0 15px;
@@ -1163,34 +1172,11 @@ body {
         padding: 12px 20px;
     }
 
-    .nav-links {
-        left: 15px;
-        right: 15px;
-    }
 
 }
 
-@media (max-width: 380px) {
-    .nav-pill{
-        position: absolute;
-        bottom: 10px;
-        left: 30vh;
-    }
 
-    .header-info{
-        display: none;
-    }
-
-}
-
-@media (max-width: 330px) {
-    .nav-pill{
-        position: absolute;
-        bottom: 10px;
-        left: 22vh;
-    }
-
-}
+@media (max-width: 330px) {}
 
 /* 9. Фикс для старых iPhone */
 @supports (-webkit-touch-callout: none) {
